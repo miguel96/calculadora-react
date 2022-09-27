@@ -118,7 +118,6 @@ const calculatorReducer = (
         throw new Error("UNKNOWN_ACTION_TYPE");
     }
   } catch (err) {
-    console.log("error", err);
     return { ...state, err: err as unknown as Error };
   }
 };
