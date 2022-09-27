@@ -1,0 +1,117 @@
+@use "reset";
+
+$color-accent: #61cab2;
+$color-accent-light: #77ffe1;
+
+$background-color: $color-accent;
+$calculator-width: 300px;
+$calculator-background: #fff;
+$color-grey-accent: #aaaaaa;
+$color-grey-base: #d7d7d7;
+$text-color: #000;
+
+$text-size-1: 4rem;
+$text-size-2: 1.5rem;
+$text-size-3: 1rem;
+$text-size-4: 0.75rem;
+$text-size-5: 0.7rem;
+
+// Reset
+input {
+  padding: 0;
+}
+
+:root {
+  background-color: $background-color;
+}
+
+// Calculator
+.calculator {
+  width: $calculator-width;
+  background-color: $calculator-background;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  box-shadow: 0 0 100px 5px $text-color;
+  overflow: hidden;
+}
+
+.result {
+  background-color: $calculator-background;
+  color: $text-color;
+  border: 0;
+  font-size: $text-size-1;
+  padding-right: 2%;
+  font-weight: 700;
+  text-align: right;
+  flex-grow: 1;
+  max-width: 80%;
+}
+
+.operation {
+  color: $color-accent;
+  padding-right: 5%;
+  font-size: $text-size-3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-grow: 1;
+  width: 80%;
+  height: 150px;
+}
+
+.keys {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $color-grey-base;
+  gap: 1px;
+  .key {
+    flex: 1 0 21%;
+    margin: 0px;
+  }
+
+  .equal {
+    background-color: $color-accent;
+    flex: 1 0 46%;
+    color: $calculator-background;
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+}
+
+.button {
+  border: 0;
+  background-color: $color-grey-base;
+  height: 60px;
+  width: 100%;
+  font-size: $text-size-2;
+
+  &:active {
+    background-color: $calculator-background;
+  }
+
+  &.operations {
+    background-color: $color-accent-light;
+    font-weight: bold;
+  }
+}
+
+// Helpers
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  justify-content: center;
+}
+
+.has-padding-100px {
+  padding: 100px;
+}
